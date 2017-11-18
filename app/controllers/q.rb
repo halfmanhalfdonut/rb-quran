@@ -8,7 +8,6 @@ module QurayolaQuran
       include Singleton
 
       def get_surah_and_verses( text )
-        puts "Sura and Verses"
         surah = ""
         verses = ""
 
@@ -20,9 +19,6 @@ module QurayolaQuran
             verses = splits[1]
           end
         end
-
-        puts "Surah #{surah}"
-        puts "Verses #{verses}"
 
         [ surah, verses ]
       end
