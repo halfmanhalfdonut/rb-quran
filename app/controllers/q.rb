@@ -8,6 +8,7 @@ module QurayolaQuran
       include Singleton
 
       def get_surah_and_verses( text )
+        puts "Sura and Verses"
         surah = ""
         verses = ""
 
@@ -20,11 +21,14 @@ module QurayolaQuran
           end
         end
 
+        puts "Surah #{surah}"
+        puts "Verses #{verses}"
+
         [ surah, verses ]
       end
 
       def get_start_and_end_verse( text )
-        text.match(/\d+?-?\d+/).to_s.split('-')
+        text.split('-')
       end
 
       def get_text( qurans, surah_id, start_verse, end_verse )
