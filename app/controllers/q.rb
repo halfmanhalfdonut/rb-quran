@@ -79,7 +79,7 @@ module QurayolaQuran
           controller = Q.instance
 
           # No params sent, just let it fall through to the 404 handler which randomizes
-          pass unless data["token"] == ENV["QURAN_TOKEN"] && data["text"] != ""
+          pass unless data["text"] != ""
 
           surah, verses = controller.get_surah_and_verses( data["text"] )
           start_verse, end_verse = controller.get_start_and_end_verse( verses )

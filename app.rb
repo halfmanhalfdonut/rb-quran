@@ -31,7 +31,7 @@ module QurayolaQuran
       QurayolaQuran::Controllers::Home.instance.randomize
     end
 
-    post "/q", &QurayolaQuran::Controllers::Q.instance.handle
+    post "/", &QurayolaQuran::Controllers::Q.instance.handle
 
     not_found do
       content_type :json
